@@ -155,25 +155,25 @@ int main(int argc, char* argv[])
     printf("lz4 = [%s]\n", lz4Filename);
     printf("dec = [%s]\n", decFilename);
 
-    // compress
-    {
-        FILE* inpFp = fopen(inpFilename, "rb");
-        FILE* outFp = fopen(lz4Filename, "wb");
+    /*// compress*/
+    /*{*/
+    /*FILE* inpFp = fopen(inpFilename, "rb");*/
+    /*FILE* outFp = fopen(lz4Filename, "wb");*/
 
-        printf("compress : %s -> %s\n", inpFilename, lz4Filename);
-        test_compress(outFp, inpFp);
-        printf("compress : done\n");
+    /*printf("compress : %s -> %s\n", inpFilename, lz4Filename);*/
+    /*test_compress(outFp, inpFp);*/
+    /*printf("compress : done\n");*/
 
-        fclose(outFp);
-        fclose(inpFp);
-    }
+    /*fclose(outFp);*/
+    /*fclose(inpFp);*/
+    /*}*/
 
     // decompress
     {
-        FILE* inpFp = fopen(lz4Filename, "rb");
+        FILE* inpFp = fopen(inpFilename, "rb");
         FILE* outFp = fopen(decFilename, "wb");
 
-        printf("decompress : %s -> %s\n", lz4Filename, decFilename);
+        printf("decompress : %s -> %s\n", inpFilename, decFilename);
         test_decompress(outFp, inpFp);
         printf("decompress : done\n");
 
