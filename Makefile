@@ -72,10 +72,10 @@ lz4programs:
 	@cd $(PRGDIR); $(MAKE) -e
 
 clean:
-	@cd $(PRGDIR); $(MAKE) clean > $(VOID)
+	#@cd $(PRGDIR); $(MAKE) clean > $(VOID)
 	@cd $(LZ4DIR); $(MAKE) clean > $(VOID)
 	@cd examples;  $(MAKE) clean > $(VOID)
-	@cd versionsTest; $(MAKE) clean > $(VOID)
+	#@cd versionsTest; $(MAKE) clean > $(VOID)
 	@echo Cleaning completed
 
 
