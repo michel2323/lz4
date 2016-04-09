@@ -60,7 +60,7 @@ endif
 
 .PHONY: default all lib lz4programs clean test versionsTest
 
-default: lz4programs
+default: lib
 
 all: lib
 	@cd $(PRGDIR); $(MAKE) -e all
